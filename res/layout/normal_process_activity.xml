@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:listViewAttr="http://schemas.android.com/apk/res/com.gk.rentcar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/normal_selections" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Spinner 
+            android:id="@+id/normal_spinner1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            />
+        <Spinner 
+            android:id="@+id/normal_spinner2"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            />
+        <Spinner 
+            android:id="@+id/normal_spinner3"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+    <cn.trinea.android.common.view.DropDownListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/normal_selections"
+        android:drawSelectorOnTop="false"
+        android:paddingBottom="@dimen/drop_down_list_footer_progress_bar_height"
+        listViewAttr:isDropDownStyle="true"
+        listViewAttr:isOnBottomStyle="true"
+        listViewAttr:isAutoLoadOnBottom="true" />
+
+</RelativeLayout>
